@@ -3,14 +3,27 @@
 	"version": "1.0.0",
 	"loadDependencies": [
 		{
+			"id": "Desktop_Core",
+			"version": "1.0.0",
+			"type": "core"
+		},
+		{
+			"id": "application.css",
+			"path": "WEBFOLDER"
+		},
+		{
 			"package": "default"
+		},
+		{
+			"package": "waktest-widget"
 		},
 		{
 			"file": "styles/index.css"
 		},
 		{
-			"id": "application.css",
+			"file": "application.css",
 			"path": "WEBFOLDER"
 		}
-	]
+	],
+	"type": "page"
 }
