@@ -18,6 +18,9 @@
 			"package": "waktest-widget"
 		},
 		{
+			"package": "Button"
+		},
+		{
 			"file": "styles/index.css"
 		},
 		{

@@ -1,11 +1,13 @@
-//var unitTest = require("waktest-module");
-//unitTest.init();
+var unitTest = require("waktest-module");
+unitTest.init();
 
 describe("My implementation", function () {
 	
+	/* In case you want to slow down the execution...
 	beforeEach(function(done){
-		setTimeout(done, 250);  // Delay between each test case in millisecond
+		setTimeout(done, 500);  // Delay between each test case in millisecond
 	});
+	*/
 	
 	it("is expected to do something", function () {
 		var foo = "bar";
@@ -37,4 +39,5 @@ describe("My implementation", function () {
 	
 });
 
-//unitTest.run();
+unitTest.run();
+
