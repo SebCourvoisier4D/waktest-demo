@@ -1,7 +1,7 @@
 //var unitTest = require("waktest-module");
 //unitTest.init();
 
-describe("My implementation", function () {
+describe("My second implementation", function () {
 	
 	/* In case you want to slow down the execution...
 	beforeEach(function(done){
@@ -10,21 +10,21 @@ describe("My implementation", function () {
 	*/
 	
 	it("is expected to do something", function () {
-		var foo = "bar";
+		var foo = "babar";
 		expect(foo).to.be.a("string");
-		expect(foo).to.equal("bar");
-		expect(foo).to.have.length(3);
+		expect(foo).to.equal("babar");
+		expect(foo).to.have.length(5);
 		// Cf. http://chaijs.com/api/bdd/ for the full BDD API
 	});
 	it("should do something", function () {
-		var foo = "bar";
+		var foo = "babar";
 		foo.should.be.a("string");
-		foo.should.equal("bar");
-		foo.should.have.length(3);
+		foo.should.equal("babar");
+		foo.should.have.length(5);
 		// Cf. http://chaijs.com/api/bdd/ for the full BDD API
 	});
 	it("eventually does something asynchronously", function (done) {
-		myAsyncFunction({
+		myOtherAsyncFunction({
 			onSuccess: function (myResult) {
 				eventually(done, function () {
 					// Put your assertions here...
