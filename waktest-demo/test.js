@@ -1,10 +1,10 @@
 //var unitTest = require("waktest-module");
 //unitTest.init();
 
-describe("My implementation", function () {
+describe("My great implementation", function () {
 	
 	beforeEach(function(done){
-		setTimeout(done, 250);  // Delay between each test case in millisecond
+		setTimeout(done, 500);  // Delay between each test case in millisecond
 	});
 	
 	it("is expected to do something", function () {
