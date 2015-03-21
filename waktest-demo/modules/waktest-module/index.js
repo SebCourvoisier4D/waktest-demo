@@ -49,6 +49,7 @@ exports.getWaktestWafLib = function(request, response) {
 	if (bootstrap.exists === true) {
 		libContent.push(bootstrap.toString());
 	}
+	libContent.push('document.body.focus();');
 	libContent.push('runner.name = \'' + runner + '\';');
 	libContent.push('runner.assertion = \'' + assertion + '\';');
 	libContent.push('runner.style = \'' + assertionStyle + '\';');
@@ -101,7 +102,7 @@ exports.getWaktestWafLib = function(request, response) {
 		}
 	}
 	if (typeof query.widgetId !== 'undefined' && query.widgetId) {
-		libContent.push('if (typeof _waktest_waf_ready === \'function\') { $("body").focus(); _waktest_waf_ready(); }');
+		libContent.push('if (typeof _waktest_waf_ready === \'function\') _waktest_waf_ready();');
 	}
 	return libContent.join('\n');
 };
