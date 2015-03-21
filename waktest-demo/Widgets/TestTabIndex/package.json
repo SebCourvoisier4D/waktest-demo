@@ -1,0 +1,27 @@
+{
+    "name": "TestTabIndex",
+    "type": "widget",
+    "studioName": "TestTabIndex",
+    "category": "Custom Widgets",
+    "iconPath": "/icons/widget.png",
+    "author": "Widget Developer",
+    "contributors": [
+        "Developer 1",
+        "Developer 2"
+    ],
+    "version": "1.0.0",
+    "copyright": "(c) 2015 Widget Developer",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/developer/Widget.git"
+    },
+    "keywords": ["wakanda", "widget"],
+    "engines": {"wakanda": ">= 11"},
+    "license": "MIT",
+    "externalWidgets": [ ],
+    "loadDependencies": [
+        {"file": "widget.js"},
+        {"file": "css/widget.css"},
+        {"file": "designer.js", "studioOnly": true}
+    ]
+}

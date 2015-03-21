@@ -21,6 +21,9 @@
 			"package": "Button"
 		},
 		{
+			"package": "TestTabIndex"
+		},
+		{
 			"file": "styles/index.css"
 		},
 		{

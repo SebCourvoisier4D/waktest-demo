@@ -3,3 +3,48 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#testTabIndex1 {
+	z-index: 5;
+	width: 300px;
+	height: 300px;
+	top: 34px;
+	left: 308px;
+	position: absolute;
+}
+
+#button4 {
+	z-index: 4;
+	width: 92px;
+	height: 34px;
+	top: 142px;
+	left: 203px;
+	position: absolute;
+}
+
+#button3 {
+	z-index: 3;
+	width: 92px;
+	height: 34px;
+	top: 87px;
+	left: 203px;
+	position: absolute;
+}
+
+#button2 {
+	z-index: 2;
+	width: 92px;
+	height: 34px;
+	top: 198px;
+	left: 203px;
+	position: absolute;
+}
+
+#button1 {
+	z-index: 1;
+	width: 92px;
+	height: 34px;
+	top: 32px;
+	left: 203px;
+	position: absolute;
+}
+
