@@ -8,7 +8,7 @@ function fillInput(input, value, callback) {
 describe("The GUI Designer", function () {
 	
 	beforeEach(function(done){
-		setTimeout(done, 500);
+		setTimeout(done, 350);
 	});
 	
 	it("is expected to add a new Button", function () {
