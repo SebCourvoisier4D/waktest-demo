@@ -31,7 +31,7 @@ describe("My Studio test", function () {
 });
 
 var pos = 0;
-var count = 290;  // crash: 300;
+var count = 295;  // crash: 300;
 
 function scroll (done) {
 	if (count > 0) {
