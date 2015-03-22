@@ -17,19 +17,35 @@ describe("My application instance", function () {
 		myBootstrap.name.should.be.equal("bootstrap.js");
 	});
 	
-	it("eventually does something asynchronously", function (done) {
-		myAsyncFunction({
-			onSuccess: function (myResult) {
+	it("has a local 'tests' FileSystem...", function (done) {
+		resolveLocalFileSystemURL('tests',
+			function(myDir) {
 				eventually(done, function () {
-					// Put your assertions here...
-					// Cf. http://chaijs.com/api/bdd/ for the full BDD API
+					expect(myDir).to.be.an("object");
+					expect(myDir).to.have.a.property("isFile");
+					expect(myDir).to.have.a.property("isDirectory");
+					expect(myDir).to.have.a.property("name");
+					expect(myDir.name).to.equal('tests');
 				});
 			},
-			onError: function (myError) {
-				done(myError); // Force the test case to fail
+			function(e) {
+				done(e);
 			}
-		});
+		);
+	});
+	
+	it("...that is a directory", function (done) {
+		resolveLocalFileSystemURL('tests',
+			function(myDir) {
+				eventually(done, function () {
+					expect(myDir.isFile).to.be.false;
+					expect(myDir.isDirectory).to.be.true;					
+				});
+			},
+			function(e) {
+				done(e);
+			}
+		);
 	});
 	
 });
-

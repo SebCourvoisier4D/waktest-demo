@@ -11,7 +11,7 @@ describe("The GUI Designer", function () {
 		setTimeout(done, 350);
 	});
 	
-	it("is expected to add a new Button", function () {
+	it("adds a new Button", function (done) {
 		var element = $('#waf_button_widgetButton-_-Button-button');	
 		expect(element).to.have.length(1);
 		expect($('#button5')).to.have.length(0);		
@@ -21,9 +21,10 @@ describe("The GUI Designer", function () {
 			moves: 1
 		});		
 		expect($('#button5')).to.have.length(1);
+		setTimeout(done, 450);
 	});
 
-	it("is expected to set its title to 'Foo'", function (done) {
+	it("sets the Button title to 'Foo'", function (done) {
 		var element = $('#textInput-data-title');
 		expect(element).to.have.length(1);		
 		fillInput(element, 'Foo', function () {
@@ -37,10 +38,47 @@ describe("The GUI Designer", function () {
 		});		
 	});
 	
-	it("is expected to select the 'Event' tab", function () {
+	it("selects the 'Event' tab", function (done) {
 		var element = $('a[href="#waf_tabEvents"]');
 		element.simulate('click');
-		expect(element.parent().hasClass('selected')).to.be.true;	
+		expect(element.parent().hasClass('selected')).to.be.true;
+		setTimeout(done, 450);
+	});
+	
+	it("opens the Code Editor on the 'On Click' event handler", function (done) {
+		var element = $('label:contains("On Click")').parent().next().children('button');
+		element.simulate('click');
+		setTimeout(function () {
+			eventually(done, function () {
+				expect(studio).to.be.an("object");
+				expect(studio.currentEditor).to.be.an("object");
+				expect(studio.currentEditor.getSelectedText()).to.contain("// Add your code here");
+			});
+		}, 450);
+	});
+	
+	it("defines the 'On Click' event handler", function (done) {
+		var handlerCode = [];
+		expect(studio).to.be.an("object");
+		expect(studio.currentEditor).to.be.an("object");
+		handlerCode.push('if (typeof window._mytest_callback === "function") {');
+		handlerCode.push('\t\t\twindow._mytest_callback(this, event);');
+		handlerCode.push('\t\t} else {');
+		handlerCode.push('\t\t\talert("Hello world!");');
+		handlerCode.push('\t\t}');
+		studio.currentEditor.insertText(handlerCode.join('\n'));
+		done();
+	});
+	
+	it("saves the change and closes the Code Editor", function (done) {
+		studio.sendCommand('Save');
+		studio.sendCommand('CloseCurrentTab');
+		document.body.focus();
+		done();
+	});
+	
+	it("runs the Page", function () {
+		studio.sendCommand('RunEditorFile');
 	});
 
 });
