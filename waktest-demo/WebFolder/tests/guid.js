@@ -7,9 +7,11 @@ function fillInput(input, value, callback) {
 
 describe("The GUI Designer", function () {
 	
+	/*
 	beforeEach(function(done){
 		setTimeout(done, 450);
 	});
+	*/
 	
 	it("adds a new Button", function (done) {
 		var element = $('#waf_button_widgetButton-_-Button-button');	
