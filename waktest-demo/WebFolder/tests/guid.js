@@ -8,7 +8,7 @@ function fillInput(input, value, callback) {
 describe("The GUI Designer", function () {
 	
 	beforeEach(function(done){
-		setTimeout(done, 350);
+		setTimeout(done, 450);
 	});
 	
 	it("adds a new Button", function (done) {
@@ -71,7 +71,7 @@ describe("The GUI Designer", function () {
 	});
 	
 	it("saves the change and closes the Code Editor", function (done) {
-		studio.sendCommand('Save');
+		studio.sendCommand('SaveAll');
 		studio.sendCommand('CloseCurrentTab');
 		document.body.focus();
 		done();

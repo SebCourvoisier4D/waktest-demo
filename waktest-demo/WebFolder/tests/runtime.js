@@ -20,7 +20,7 @@ function selectNextTabbable(){
 describe("The TabIndex Manager", function () {
 	
 	beforeEach(function(done){
-		setTimeout(done, 350);
+		setTimeout(done, 450);
 	});
 	
 	it("is expected to set the focus on the 'First' button first", function () {

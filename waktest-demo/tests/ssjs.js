@@ -1,6 +1,6 @@
-describe("My application instance", function () {
+describe("My application", function () {
 	
-	it("is not an administration application", function () {
+	it("is not an 'administration application'", function () {
 		expect(application).to.have.a.property("administrator");
 		expect(application.administrator).to.be.false;
 	});
