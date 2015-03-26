@@ -12,9 +12,6 @@
 			"path": "WEBFOLDER"
 		},
 		{
-			"package": "default"
-		},
-		{
 			"package": "waktest-widget"
 		},
 		{
@@ -22,6 +19,9 @@
 		},
 		{
 			"package": "TestTabIndex"
+		},
+		{
+			"package": "default"
 		},
 		{
 			"file": "styles/index.css"

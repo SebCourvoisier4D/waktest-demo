@@ -1,5 +1,6 @@
 ﻿{
 	"serverType": "github",
 	"gitURL": "https://github.com/SebCourvoisier4D",
-	"gitIsPrivateRepository": "false"
+	"gitIsPrivateRepository": "false",
+	"gitEmail": "sebastien.courvoisier@4d.com"
 }
